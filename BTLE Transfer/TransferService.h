@@ -1,6 +1,3 @@
-
-
-
 #ifndef LE_Transfer_TransferService_h
 #define LE_Transfer_TransferService_h
 

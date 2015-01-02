@@ -1,4 +1,3 @@
-
 #import "BTLEPeripheralViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "TransferService.h"

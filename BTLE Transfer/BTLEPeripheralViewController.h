@@ -1,5 +1,3 @@
-
-
 #import <UIKit/UIKit.h>
 
 @interface BTLEPeripheralViewController : UIViewController
