@@ -14,8 +14,14 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SHW-C2-RN9">
+                                <rect key="frame" x="227" y="80" width="79" height="27"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="CLX-Le-b13" eventType="valueChanged" id="43o-NP-8Em"/>
+                                </connections>
+                            </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Advertising" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" useAutomaticPreferredMaxLayoutWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GMc-4O-5iW">
-                                <rect key="frame" x="20" y="217" width="171" height="21"/>
+                                <rect key="frame" x="23" y="83" width="171" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="171" id="9AT-WB-28X"/>
                                 </constraints>
@@ -23,19 +29,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SHW-C2-RN9">
-                                <rect key="frame" x="223" y="214" width="79" height="27"/>
-                                <connections>
-                                    <action selector="switchChanged:" destination="CLX-Le-b13" eventType="valueChanged" id="43o-NP-8Em"/>
-                                </connections>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="0.94615963855421703" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="SHW-C2-RN9" secondAttribute="bottom" constant="175" id="0ya-EM-KGl"/>
-                            <constraint firstItem="SHW-C2-RN9" firstAttribute="centerY" secondItem="GMc-4O-5iW" secondAttribute="centerY" type="default" id="7Os-TG-TWq"/>
-                            <constraint firstAttribute="trailing" secondItem="SHW-C2-RN9" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Hfb-04-R3K"/>
-                            <constraint firstItem="GMc-4O-5iW" firstAttribute="leading" secondItem="HqI-5G-qR2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="NUi-cv-vvL"/>
+                            <constraint firstItem="GMc-4O-5iW" firstAttribute="leading" secondItem="HqI-5G-qR2" secondAttribute="leading" constant="23" id="1pW-UL-f83"/>
+                            <constraint firstAttribute="trailing" secondItem="SHW-C2-RN9" secondAttribute="trailing" constant="16" id="KLw-Uc-IBL"/>
+                            <constraint firstItem="SHW-C2-RN9" firstAttribute="centerY" secondItem="GMc-4O-5iW" secondAttribute="centerY" type="default" id="plP-xp-uEl"/>
+                            <constraint firstItem="SHW-C2-RN9" firstAttribute="top" secondItem="HqI-5G-qR2" secondAttribute="top" constant="80" id="xxh-dC-hnf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="BTLE Beacon" id="krm-GA-4hL"/>
