@@ -3,8 +3,7 @@
 #import "TransferService.h"
 
 
-@interface BTLEPeripheralViewController () <CBPeripheralManagerDelegate, UITextViewDelegate>
-@property (strong, nonatomic) IBOutlet UITextView       *textView;
+@interface BTLEPeripheralViewController () <CBPeripheralManagerDelegate>
 @property (strong, nonatomic) IBOutlet UISwitch         *advertisingSwitch;
 @property (strong, nonatomic) CBPeripheralManager       *peripheralManager;
 @property (strong, nonatomic) CBMutableCharacteristic   *transferCharacteristic;
@@ -32,6 +31,7 @@
 
     // Start up the CBPeripheralManager
     _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
+
 }
 
 
@@ -81,22 +81,6 @@
     [self.peripheralManager addService:transferService];
 }
 
-
-/** Catch when someone subscribes to our characteristic, then start sending them data
- */
-- (void)peripheralManager:(CBPeripheralManager *)peripheral central:(CBCentral *)central didSubscribeToCharacteristic:(CBCharacteristic *)characteristic
-{
-    NSLog(@"Central subscribed to characteristic");
-    
-    // Get the data
-    self.dataToSend = [self.textView.text dataUsingEncoding:NSUTF8StringEncoding];
-    
-    // Reset the index
-    self.sendDataIndex = 0;
-    
-    // Start sending
-    [self sendData];
-}
 
 
 /** Recognise when the central unsubscribes
@@ -205,42 +189,6 @@
     // Start sending again
     [self sendData];
 }
-
-
-
-#pragma mark - TextView Methods
-
-
-
-/** This is called when a change happens, so we know to stop advertising
- */
-- (void)textViewDidChange:(UITextView *)textView
-{
-    // If we're already advertising, stop
-    if (self.advertisingSwitch.on) {
-        [self.advertisingSwitch setOn:NO];
-        [self.peripheralManager stopAdvertising];
-    }
-}
-
-
-/** Adds the 'Done' button to the title bar
- */
-- (void)textViewDidBeginEditing:(UITextView *)textView
-{
-    // We need to add this manually so we have a way to dismiss the keyboard
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonSystemItemDone target:self action:@selector(dismissKeyboard)];
-    self.navigationItem.rightBarButtonItem = rightButton;
-}
-
-
-/** Finishes the editing */
-- (void)dismissKeyboard
-{
-    [self.textView resignFirstResponder];
-    self.navigationItem.rightBarButtonItem = nil;
-}
-
 
 
 #pragma mark - Switch Methods
