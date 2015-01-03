@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B920C5DD15FAB25400A2DAC6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B920C5DC15FAB25400A2DAC6 /* Default-568h@2x.png */; };
 		B92B557315E453690036A8A2 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = B92B557215E453690036A8A2 /* Icon-57.png */; };
 		B92B557515E4536C0036A8A2 /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = B92B557415E4536C0036A8A2 /* Icon-114.png */; };
 		B92B557715E4541E0036A8A2 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = B92B557615E4541E0036A8A2 /* Icon-72.png */; };
 		B92B557915E4545B0036A8A2 /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = B92B557815E4545B0036A8A2 /* Icon-144.png */; };
-		B92B557F15E457480036A8A2 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B92B557E15E457480036A8A2 /* Default-Portrait@2x~ipad.png */; };
-		B92B558115E4574D0036A8A2 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = B92B558015E4574D0036A8A2 /* Default-Portrait~ipad.png */; };
 		B92B559015E4621C0036A8A2 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92B558F15E4621C0036A8A2 /* CoreBluetooth.framework */; };
 		B9F9161A15D5806400B3B398 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F9161915D5806400B3B398 /* UIKit.framework */; };
 		B9F9161C15D5806400B3B398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F9161B15D5806400B3B398 /* Foundation.framework */; };
@@ -28,15 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B920C5DC15FAB25400A2DAC6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		83C1811E1A57A3B60070AEE7 /* StirService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StirService.h; sourceTree = "<group>"; };
 		B92B557215E453690036A8A2 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-57.png"; path = "../Icon-57.png"; sourceTree = "<group>"; };
 		B92B557415E4536C0036A8A2 /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-114.png"; path = "../Icon-114.png"; sourceTree = "<group>"; };
 		B92B557615E4541E0036A8A2 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
 		B92B557815E4545B0036A8A2 /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-144.png"; path = "../Icon-144.png"; sourceTree = "<group>"; };
-		B92B557A15E456770036A8A2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
-		B92B557C15E4567F0036A8A2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		B92B557E15E457480036A8A2 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
-		B92B558015E4574D0036A8A2 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		B92B558F15E4621C0036A8A2 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		B9F9161515D5806400B3B398 /* BTLE Transfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTLE Transfer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9F9161915D5806400B3B398 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -54,7 +47,6 @@
 		B9F9163815D5806500B3B398 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B9F9164215D5808F00B3B398 /* BTLEPeripheralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLEPeripheralViewController.h; sourceTree = "<group>"; };
 		B9F9164315D5808F00B3B398 /* BTLEPeripheralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLEPeripheralViewController.m; sourceTree = "<group>"; };
-		B9F9164715D583E500B3B398 /* TransferService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransferService.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +95,7 @@
 		B9F9161F15D5806400B3B398 /* BTLE Transfer */ = {
 			isa = PBXGroup;
 			children = (
+				83C1811E1A57A3B60070AEE7 /* StirService.h */,
 				B9F9162815D5806400B3B398 /* AppDelegate.h */,
 				B9F9162915D5806400B3B398 /* AppDelegate.m */,
 				B9F9163115D5806500B3B398 /* MainStoryboard_iPhone.storyboard */,
@@ -111,7 +104,6 @@
 				B9F9163815D5806500B3B398 /* ViewController.m */,
 				B9F9164215D5808F00B3B398 /* BTLEPeripheralViewController.h */,
 				B9F9164315D5808F00B3B398 /* BTLEPeripheralViewController.m */,
-				B9F9164715D583E500B3B398 /* TransferService.h */,
 				B9F9162015D5806400B3B398 /* Supporting Files */,
 			);
 			path = "BTLE Transfer";
@@ -120,11 +112,6 @@
 		B9F9162015D5806400B3B398 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B920C5DC15FAB25400A2DAC6 /* Default-568h@2x.png */,
-				B92B558015E4574D0036A8A2 /* Default-Portrait~ipad.png */,
-				B92B557E15E457480036A8A2 /* Default-Portrait@2x~ipad.png */,
-				B92B557C15E4567F0036A8A2 /* Default@2x.png */,
-				B92B557A15E456770036A8A2 /* Default.png */,
 				B92B557815E4545B0036A8A2 /* Icon-144.png */,
 				B92B557615E4541E0036A8A2 /* Icon-72.png */,
 				B92B557415E4536C0036A8A2 /* Icon-114.png */,
@@ -200,9 +187,6 @@
 				B92B557515E4536C0036A8A2 /* Icon-114.png in Resources */,
 				B92B557715E4541E0036A8A2 /* Icon-72.png in Resources */,
 				B92B557915E4545B0036A8A2 /* Icon-144.png in Resources */,
-				B92B557F15E457480036A8A2 /* Default-Portrait@2x~ipad.png in Resources */,
-				B92B558115E4574D0036A8A2 /* Default-Portrait~ipad.png in Resources */,
-				B920C5DD15FAB25400A2DAC6 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

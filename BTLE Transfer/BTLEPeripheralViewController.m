@@ -1,6 +1,6 @@
 #import "BTLEPeripheralViewController.h"
 #import <CoreBluetooth/CoreBluetooth.h>
-#import "TransferService.h"
+#import "StirService.h"
 
 
 @interface BTLEPeripheralViewController () <CBPeripheralManagerDelegate>
@@ -36,7 +36,6 @@
 
 
 #pragma mark - Peripheral Methods
-
 
 
 /** Required protocol method.  A full app should take care of all the possible states,
