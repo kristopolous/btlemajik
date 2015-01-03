@@ -7,7 +7,7 @@
 @property (strong, nonatomic) IBOutlet UISwitch         *advertisingSwitch;
 @property (strong, nonatomic) CBPeripheralManager       *peripheralManager;
 @property (strong, nonatomic) CBMutableCharacteristic   *transferCharacteristic;
-@property (nonatomic, readwrite) NSInteger              sendDataIndex;
+//@property (nonatomic, readwrite) NSInteger              sendDataIndex;
 @end
 
 
@@ -23,13 +23,19 @@
 #pragma mark - View Lifecycle
 
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     // Start up the CBPeripheralManager
     _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(enteredBackground:)
+                                                 name:@"Background"
+                                               object:nil];
+    
+    NSLog(@"Registered");
+
 
 }
 
@@ -37,7 +43,8 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     // Don't keep it going while we're not showing.
-    [self.peripheralManager stopAdvertising];
+  //  [self.peripheralManager stopAdvertising];
+    NSLog(@"Central minimized");
 
     [super viewWillDisappear:animated];
 }
@@ -68,7 +75,7 @@
                                                                       properties:CBCharacteristicPropertyNotify
                                                                            value:nil
                                                                      permissions:CBAttributePermissionsReadable];
-
+/*
     // Then the service
     CBMutableService *transferService = [[CBMutableService alloc] initWithType:[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]
                                                                         primary:YES];
@@ -78,25 +85,19 @@
     
     // And add it to the peripheral manager
     [self.peripheralManager addService:transferService];
+ */
 }
 
-
+- (void)enteredBackground:(NSNotification *) notification
+{
+    NSLog(@"Background msg");
+}
 
 /** Recognise when the central unsubscribes
  */
 - (void)peripheralManager:(CBPeripheralManager *)peripheral central:(CBCentral *)central didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
 {
     NSLog(@"Central unsubscribed from characteristic");
-}
-
-
-/** This callback comes in when the PeripheralManager is ready to send the next chunk of data.
- *  This is to ensure that packets will arrive in the order they are sent
- */
-- (void)peripheralManagerIsReadyToUpdateSubscribers:(CBPeripheralManager *)peripheral
-{
-    // Start sending again
-    //[self sendData];
 }
 
 

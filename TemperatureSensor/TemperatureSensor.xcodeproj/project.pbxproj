@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83C1811D1A5792B00070AEE7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83C1811C1A5792B00070AEE7 /* Default-568h@2x.png */; };
 		B9182535148D762600D6064E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9182534148D762600D6064E /* UIKit.framework */; };
 		B9182537148D762600D6064E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9182536148D762600D6064E /* Foundation.framework */; };
 		B9182539148D762600D6064E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9182538148D762600D6064E /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83C1811C1A5792B00070AEE7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B9182530148D762600D6064E /* TemperatureSensor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperatureSensor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9182534148D762600D6064E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B9182536148D762600D6064E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +70,7 @@
 		B9182525148D762500D6064E = {
 			isa = PBXGroup;
 			children = (
+				83C1811C1A5792B00070AEE7 /* Default-568h@2x.png */,
 				B9ADCFD41497DA600098522D /* ReadMe.txt */,
 				B918253A148D762600D6064E /* TemperatureSensor */,
 				B9182533148D762600D6064E /* Frameworks */,
@@ -190,6 +193,7 @@
 				B9C383731491694000CFD0B5 /* Icon-114.png in Resources */,
 				B9C383761491694300CFD0B5 /* Icon-57.png in Resources */,
 				B9C383781491694800CFD0B5 /* Default@2x.png in Resources */,
+				83C1811D1A5792B00070AEE7 /* Default-568h@2x.png in Resources */,
 				B9ADCFD51497DA600098522D /* ReadMe.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
