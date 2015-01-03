@@ -6,8 +6,6 @@
 @interface BTLEPeripheralViewController () <CBPeripheralManagerDelegate>
 @property (strong, nonatomic) IBOutlet UISwitch         *advertisingSwitch;
 @property (strong, nonatomic) CBPeripheralManager       *peripheralManager;
-@property (strong, nonatomic) CBMutableCharacteristic   *transferCharacteristic;
-//@property (nonatomic, readwrite) NSInteger              sendDataIndex;
 @end
 
 #define NOTIFY_MTU      20
@@ -24,20 +22,14 @@
 
     // Start up the CBPeripheralManager
     _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(enteredBackground:)
-                                                 name:@"Background"
-                                               object:nil];
-
 }
 
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     // Don't keep it going while we're not showing.
-  //  [self.peripheralManager stopAdvertising];
-    NSLog(@"Central minimized");
-
+    //  [self.peripheralManager stopAdvertising];
+  
     [super viewWillDisappear:animated];
 }
 
@@ -59,33 +51,7 @@
     
     // We're in CBPeripheralManagerStatePoweredOn state...
     NSLog(@"self.peripheralManager powered on.");
-    
-    // ... so build our service.
-    
-    // Start with the CBMutableCharacteristic
-    self.transferCharacteristic = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:TRANSFER_CHARACTERISTIC_UUID]
-                                                                      properties:CBCharacteristicPropertyNotify
-                                                                           value:nil
-                                                                     permissions:CBAttributePermissionsReadable];
-/*
-    // Then the service
-    CBMutableService *transferService = [[CBMutableService alloc] initWithType:[CBUUID UUIDWithString:TRANSFER_SERVICE_UUID]
-                                                                        primary:YES];
-    
-    // Add the characteristic to the service
-    transferService.characteristics = @[self.transferCharacteristic];
-    
-    // And add it to the peripheral manager
-    [self.peripheralManager addService:transferService];
- */
 }
-
-- (void)enteredBackground:(NSNotification *) notification
-{
-    NSLog(@"Background msg");
-    NSLog(@"%d", self.advertisingSwitch.on);
-}
-
 
 #pragma mark - Switch Methods
 
