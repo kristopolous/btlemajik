@@ -10,14 +10,9 @@
 //@property (nonatomic, readwrite) NSInteger              sendDataIndex;
 @end
 
-
-
 #define NOTIFY_MTU      20
 
-
-
 @implementation BTLEPeripheralViewController
-
 
 
 #pragma mark - View Lifecycle
@@ -33,9 +28,6 @@
                                              selector:@selector(enteredBackground:)
                                                  name:@"Background"
                                                object:nil];
-    
-    NSLog(@"Registered");
-
 
 }
 
@@ -91,13 +83,7 @@
 - (void)enteredBackground:(NSNotification *) notification
 {
     NSLog(@"Background msg");
-}
-
-/** Recognise when the central unsubscribes
- */
-- (void)peripheralManager:(CBPeripheralManager *)peripheral central:(CBCentral *)central didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic
-{
-    NSLog(@"Central unsubscribed from characteristic");
+    NSLog(@"%d", self.advertisingSwitch.on);
 }
 
 
